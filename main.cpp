@@ -20,6 +20,14 @@ int main()
     while(input != "exit")
     {
         cin >> input;
+
+        if ( input == "pause")
+            player.Getstate()->onPause();
+        else if ( input == "stop")
+            player.Getstate()->onStop();
+        else if ( input == "play")
+            player.Getstate()->onPlay();
+
         cout << input << endl;
     }
     return 0;

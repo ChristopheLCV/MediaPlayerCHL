@@ -12,6 +12,7 @@ class StoppedState : public State
         StoppedState();
         virtual ~StoppedState();
 
+        void onPause();
         void onPlay();
         void onStop();
 
