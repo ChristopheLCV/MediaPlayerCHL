@@ -26,6 +26,8 @@ class Player
         void pause(void);
         void stop(void);
         void play(void);
+        void next(void);
+        void prev(void);
 
 
     protected:

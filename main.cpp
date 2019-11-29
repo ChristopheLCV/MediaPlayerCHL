@@ -21,12 +21,19 @@ int main()
     {
         cin >> input;
 
-        if ( input == "pause")
-            player.Getstate()->onPause();
-        else if ( input == "stop")
-            player.Getstate()->onStop();
-        else if ( input == "play")
-            player.Getstate()->onPlay();
+        try
+        {
+            if ( input == "pause")
+                player.Getstate()->onPause();
+            else if ( input == "stop")
+                player.Getstate()->onStop();
+            else if ( input == "play")
+                player.Getstate()->onPlay();
+        }
+        catch(char const *errMsg)
+        {
+            cout << "ERROR: " << errMsg << endl;
+        }
     }
     return 0;
 }

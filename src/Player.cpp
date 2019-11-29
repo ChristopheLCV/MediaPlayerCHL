@@ -71,3 +71,11 @@ void Player::play(void)
 {
     cout << "Playing " << tracklist->at(currTrk) << endl;
 }
+void Player::next(void)
+{
+
+}
+void Player::prev(void)
+{
+
+}

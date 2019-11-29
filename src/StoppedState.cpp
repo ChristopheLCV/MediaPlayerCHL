@@ -19,5 +19,6 @@ void StoppedState::onPlay()
 }
 void StoppedState::onStop()
 {
-    cout << "Already Stopped !" << endl;
+    //cout << "Already Stopped !" << endl;
+    throw "Player already stoped";
 }
