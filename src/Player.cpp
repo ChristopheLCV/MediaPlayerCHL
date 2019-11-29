@@ -6,7 +6,7 @@ Player::Player()
     // assign a new tracklist
     tracklist = new vector<string>;
 
-    Setplaying(false);
+    //
     tracklist->push_back("trk 01: The Pretty Reckless - Make me wanna die");
     tracklist->push_back("trk 02: The Pretty Reckless - Heaven knows");
     tracklist->push_back("trk 03: The Pretty Reckless - Take me down");
@@ -21,6 +21,12 @@ Player::Player()
     tracklist->push_back("trk 12: Rammstein - Engel");
     tracklist->push_back("trk 13: Muse - Supermassive black hole");
     tracklist->push_back("trk 13: Muse - Supremacy");
+
+    Setplaying(false);
+
+    // Create new state and assign it to player
+    Setstate(new State(this));
+
 }
 
 // Destructor

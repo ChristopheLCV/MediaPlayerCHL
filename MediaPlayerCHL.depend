@@ -4,10 +4,18 @@
 	<algorithm>
 	"Player.h"
 
-1575018788 source:d:\devt\mediaplayerchl\src\player.cpp
+1575020862 source:d:\devt\mediaplayerchl\src\player.cpp
 	"Player.h"
 
-1575018836 d:\devt\mediaplayerchl\include\player.h
+1575021618 d:\devt\mediaplayerchl\include\player.h
 	<iostream>
 	<vector>
+	"State.h"
+
+1575020392 source:d:\devt\mediaplayerchl\src\state.cpp
+	"State.h"
+
+1575020945 d:\devt\mediaplayerchl\include\state.h
+	<iostream>
+	"Player.h"
 

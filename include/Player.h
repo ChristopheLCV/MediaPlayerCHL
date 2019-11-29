@@ -4,6 +4,7 @@
 #include <vector>
 using namespace std;
 
+class State;
 
 class Player
 {
@@ -17,8 +18,8 @@ class Player
         void Settracklist(std::vector<std::string> *val) { tracklist = val; }
         int GetcurrTrk() { return currTrk; }
         void SetcurrTrk(int val) { currTrk = val; }
-        //State Getstate() { return state; }
-        //void Setstate(State val) { state = val; }
+        State *Getstate() { return state; }
+        void Setstate(State *val) { state = val; }
 
     protected:
 
@@ -26,7 +27,9 @@ class Player
         bool playing;
         std::vector<std::string> *tracklist;
         int currTrk;
-        //State state;
+        State *state;
 };
+
+#include "State.h"
 
 #endif // PLAYER_H
