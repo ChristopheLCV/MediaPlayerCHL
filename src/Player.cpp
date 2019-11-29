@@ -6,7 +6,7 @@ Player::Player()
     // assign a new tracklist
     tracklist = new vector<string>;
 
-    //
+    // Fill tracklist
     tracklist->push_back("trk 01: The Pretty Reckless - Make me wanna die");
     tracklist->push_back("trk 02: The Pretty Reckless - Heaven knows");
     tracklist->push_back("trk 03: The Pretty Reckless - Take me down");
@@ -20,12 +20,13 @@ Player::Player()
     tracklist->push_back("trk 11: Rammstein - Du Hast");
     tracklist->push_back("trk 12: Rammstein - Engel");
     tracklist->push_back("trk 13: Muse - Supermassive black hole");
-    tracklist->push_back("trk 13: Muse - Supremacy");
+    tracklist->push_back("trk 14: Muse - Supremacy");
 
-    Setplaying(false);
+    playing = false;
+    currTrk = 0;
 
     // Create new state and assign it to player
-    Setstate(new State(this));
+    Setstate(new StoppedState(this));
 
 }
 
@@ -33,4 +34,40 @@ Player::Player()
 Player::~Player()
 {
     delete tracklist;
+}
+
+string Player::prevTrack(void)
+{
+    if ( currTrk == 0 )
+        currTrk = tracklist->size() - 1;
+    else
+     currTrk = currTrk - 1;
+
+    //return "Playing " + (*tracklist)[currTrk];
+    return "Playing " + tracklist->at(currTrk);
+}
+string Player::nextTrack(void)
+{
+    currTrk = (currTrk + 1) % tracklist->size();
+    //return "Playing " + (*tracklist)[currTrk];
+    return "Playing " + tracklist->at(currTrk);
+}
+
+void Player::displayCurrTrack ( void )
+{
+    cout << "Playing " << tracklist->at(currTrk);
+}
+
+void Player::pause(void)
+{
+    cout << "Pausing " << tracklist->at(currTrk);
+}
+void Player::stop(void)
+{
+    currTrk = 0;
+    cout << "Stopped";
+}
+void Player::play(void)
+{
+    cout << "Playing " << tracklist->at(currTrk);
 }

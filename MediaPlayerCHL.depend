@@ -7,15 +7,22 @@
 1575020862 source:d:\devt\mediaplayerchl\src\player.cpp
 	"Player.h"
 
-1575021618 d:\devt\mediaplayerchl\include\player.h
+1575024056 d:\devt\mediaplayerchl\include\player.h
 	<iostream>
 	<vector>
 	"State.h"
+	"StoppedState.h"
 
 1575020392 source:d:\devt\mediaplayerchl\src\state.cpp
 	"State.h"
 
-1575020945 d:\devt\mediaplayerchl\include\state.h
+1575023782 d:\devt\mediaplayerchl\include\state.h
 	<iostream>
 	"Player.h"
+
+1575024003 d:\devt\mediaplayerchl\include\stoppedstate.h
+	<State.h>
+
+1575023993 source:d:\devt\mediaplayerchl\src\stoppedstate.cpp
+	"StoppedState.h"
 

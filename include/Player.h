@@ -20,6 +20,13 @@ class Player
         void SetcurrTrk(int val) { currTrk = val; }
         State *Getstate() { return state; }
         void Setstate(State *val) { state = val; }
+        string nextTrack(void);
+        string prevTrack(void);
+        void displayCurrTrack ( void );
+        void pause(void);
+        void stop(void);
+        void play(void);
+
 
     protected:
 
@@ -31,5 +38,6 @@ class Player
 };
 
 #include "State.h"
+#include "StoppedState.h"
 
 #endif // PLAYER_H
