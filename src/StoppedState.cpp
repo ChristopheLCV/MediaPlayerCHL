@@ -1,4 +1,5 @@
 #include "StoppedState.h"
+#include "PlayingState.h"
 
 StoppedState::~StoppedState()
 {
@@ -11,7 +12,9 @@ void StoppedState::onPause()
 }
 void StoppedState::onPlay()
 {
+    player->Setstate(new PlayingState(player));
     player->play();
+    delete this;
 }
 void StoppedState::onStop()
 {

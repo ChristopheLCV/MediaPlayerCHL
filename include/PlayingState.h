@@ -4,11 +4,18 @@
 #include <State.h>
 
 
+
 class PlayingState : public State
 {
+    using State::State;
+
     public:
         PlayingState();
         virtual ~PlayingState();
+
+        void onPause();
+        void onPlay();
+        void onStop();
 
     protected:
 

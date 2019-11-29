@@ -27,8 +27,6 @@ int main()
             player.Getstate()->onStop();
         else if ( input == "play")
             player.Getstate()->onPlay();
-
-        cout << input << endl;
     }
     return 0;
 }

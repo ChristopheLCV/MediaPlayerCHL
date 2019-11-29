@@ -55,19 +55,19 @@ string Player::nextTrack(void)
 
 void Player::displayCurrTrack ( void )
 {
-    cout << "Playing " << tracklist->at(currTrk);
+    cout << "Playing " << tracklist->at(currTrk) << endl;
 }
 
 void Player::pause(void)
 {
-    cout << "Pausing " << tracklist->at(currTrk);
+    cout << "Pausing " << tracklist->at(currTrk) << endl;
 }
 void Player::stop(void)
 {
     currTrk = 0;
-    cout << "Stopped";
+    cout << "Stopped" << endl;
 }
 void Player::play(void)
 {
-    cout << "Playing " << tracklist->at(currTrk);
+    cout << "Playing " << tracklist->at(currTrk) << endl;
 }
