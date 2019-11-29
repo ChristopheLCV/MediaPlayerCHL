@@ -1,5 +1,6 @@
 #include "StoppedState.h"
 #include "PlayingState.h"
+#include "PausedState.h"
 
 StoppedState::~StoppedState()
 {

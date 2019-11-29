@@ -16,7 +16,7 @@ int main()
                 }
               );
 
-    cout << "Input text (type \"exit\" to exit):" << endl;
+    cout << "Input command (play, stop, pause, or exit):" << endl;
     while(input != "exit")
     {
         cin >> input;
